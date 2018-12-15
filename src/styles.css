@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+    );
+
+body{
+    background-image: url("2.jpg");
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #426bf4;
+    color: white;
+    text-align: center;
+    height:50px;
+}
+
+#ftext{
+    margin-top:15px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}

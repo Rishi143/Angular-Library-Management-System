@@ -1,0 +1,18 @@
+<div class="container">
+<h1>Delete Book</h1>
+  <form #bookForm="ngForm" (ngSubmit)="onDelete()">
+       <div class="form-group">
+          <label for="bid">Book Id</label>
+          <input type="text" id="bid" name="bid" [(ngModel)]="bookid" class="form-control" placeholder="Enter Book ID">
+        </div>
+        
+        <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Submit</button>
+
+  </form>
+  <div  id="alert" *ngIf="flagf === true">
+  <h2 >Book Deleted</h2>
+  </div>
+  <div  id="alert1" *ngIf="flagf === false">
+  <h2 >Book not Deleted</h2>
+  </div>
+</div>  

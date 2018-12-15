@@ -1,0 +1,21 @@
+<h1>ISSUED BOOKS TILL DATE</h1>
+<table class="table">
+
+<tr>
+    <th>Issue ID</th>
+    <th>Book ID</th>
+    <th>Issue Date</th>
+    <th>Return Date</th>
+  </tr>
+
+<tr *ngFor="let e of receivedBook">
+
+
+<td *ngIf="e.flag === 1">{{e.issueid}} </td>
+<td *ngIf="e.flag === 1"> {{e.bid}} </td>
+<td *ngIf="e.flag === 1"> {{e.issueDate}} </td> 
+<td *ngIf="e.flag === 1">{{e.dueDate}} </td> 
+
+  </tr>
+
+  </table>

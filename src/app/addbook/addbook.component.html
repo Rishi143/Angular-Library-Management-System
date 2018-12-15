@@ -1,0 +1,34 @@
+
+<div class="container">
+<h1>Book Data Entry</h1>
+  <form #bookForm="ngForm" (ngSubmit)="onSubmit()">
+       <div class="form-group">
+          <label for="bid">Book Id</label>
+          <input type="text" id="bid" name="bid" [(ngModel)]="model.bid" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" [(ngModel)]="model.author" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="bookName">Book Name</label>
+          <input type="text" id="bookName" name="bookName" [(ngModel)]="model.bookName" class="form-control">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+             <input type="text" id="publisher" name="publisher" [(ngModel)]="model.publisher" class="form-control">
+         
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Submit</button>
+
+  </form>
+  <div  id="alert" *ngIf="flagf === true">
+  <h2 >Book Inserted</h2>
+  </div>
+  <div  id="alert1" *ngIf="flagf === false">
+  <h2 >Book not Inserted</h2>
+  </div>
+</div>  

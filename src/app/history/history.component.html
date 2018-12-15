@@ -1,0 +1,21 @@
+
+<h1>ISSUED BOOKS HISTORY</h1>
+<table class="table">
+
+<tr>
+    <th>Issue ID</th>
+    <th>Book ID</th>
+    <th>Issue Date</th>
+    <th>Return Date</th>
+  </tr>
+
+<tr *ngFor="let e of receivedBook">
+
+<td>{{e.issueid}} </td>
+<td> {{e.bid}} </td>
+<td> {{e.issueDate}} </td> 
+<td>{{e.dueDate}} </td> 
+
+  </tr>
+
+  </table>

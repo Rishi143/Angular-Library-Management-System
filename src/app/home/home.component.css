@@ -1,0 +1,12 @@
+#formdiv{
+    margin:100px auto;
+}
+
+th{
+    background-color: black;
+    color:white;
+}
+
+tr{
+  background-color:#8aa5db;  
+}

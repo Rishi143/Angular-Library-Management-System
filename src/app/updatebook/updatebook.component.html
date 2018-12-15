@@ -1,0 +1,37 @@
+
+
+<div class="container">
+
+<h1>Book Update Entry</h1>
+  <form #bookForm="ngForm" (ngSubmit)="onSubmit()">
+       <div class="form-group">
+          <label for="bid">Book Id</label>
+          <input type="text" id="bid" name="bid" [(ngModel)]="model.bid" class="form-control">
+          <button type="button" class="btn btn-success" (click)="check(model.bid)">SearchBook</button>
+        </div>
+      
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" [(ngModel)]="model.author" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bookName">Book Name</label>
+          <input type="text" id="bookName" name="bookName" [(ngModel)]="model.bookName" class="form-control" required>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+             <input type="text" id="publisher" name="publisher" [(ngModel)]="model.publisher" class="form-control" required>
+         
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Submit</button>
+</form>
+  <div  id="alert" *ngIf="flagf === true">
+  <h2 >Book updated</h2>
+  </div>
+  <div  id="alert1" *ngIf="flagf === false">
+  <h2 >Book not updated</h2>
+  </div>
+</div>  

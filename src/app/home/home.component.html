@@ -1,0 +1,27 @@
+<div id="formdiv" class="container">
+<form #bookForm="ngForm" (ngSubmit)="searchBook()">
+  <div class="form-group">
+<input class="form-control" type="text" name="booksearch" [(ngModel)]="bookname" placeholder="Enter Book Name">
+ </div>
+<button type="submit" class="btn btn-success">Submit</button>
+ 
+</form>
+</div>
+<table class="table">
+  <tr>
+    <th>Book ID</th>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Publisher</th>
+    <th>Availability</th>
+    <th>Request</th>
+  </tr>
+<tr *ngFor="let e of receivedBook">
+<td>{{e.bid}} </td>
+<td> {{e.author}} </td>
+<td> {{e.bookName}} </td> 
+<td>{{e.publisher}} </td>
+<td>{{e.available}} </td>
+<td> <button type="button" class="btn btn-primary" (click)="requestBook(e.bid)">RequestBook</button> 
+</tr>
+</table>

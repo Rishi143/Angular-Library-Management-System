@@ -1,0 +1,19 @@
+th{
+    background-color: black;
+    color:white;
+}
+
+tr{
+  background-color:#8aa5db;  
+}
+
+table{
+    margin-top:100px;
+}
+
+h1{
+    color:white;
+    font-family:  sans-serif,Arial, Helvetica;
+    text-align:center;
+    margin-top:50px;
+}
